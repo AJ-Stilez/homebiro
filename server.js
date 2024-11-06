@@ -27,7 +27,7 @@ const mySchema = new mongoose.Schema({
   },
 );
 
-const MyModel = mongoose.model("Users", mySchema, "homebiro");
+const MyModel = mongoose.model("homebiro", mySchema);
 
 app.get("/", async (req, res) => {
     try{
