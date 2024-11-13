@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors"
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ const uri = process.env.URI;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(uri)
     .then(() => console.log("Connected to MongoDB"))
