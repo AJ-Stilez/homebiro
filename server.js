@@ -48,7 +48,7 @@ app.post("/store", async (req, res) => {
     try{
         const { fullname, email } = req.body;
         const saveUser = await MyModel.create({
-            name: fullname,
+            fullname: fullname,
             email: email,
         })
         res.send("Added successfully");
