@@ -20,13 +20,13 @@ mongoose.connect(uri)
 const mySchema = new mongoose.Schema({
     fullname: {
       type: String,
-      required: false, 
+      required: true, 
     },
     email: {
       type: String,
       required: true,
     }
-  },
+  }
 );
 
 const MyModel = mongoose.model("homebiro", mySchema);
